@@ -11,7 +11,7 @@ Sistema produtor/consumidor de reviews de brinquedos (Dump escolhido pelo profes
 
 ### 1. Adicionar o dataset
 
-Crie a pasta `data/` e coloque o arquivo `arquivo.json` dentro:
+Crie a pasta `dataset/` e coloque o arquivo `arquivo.json` dentro:
 
 ```bash
 mkdir data
