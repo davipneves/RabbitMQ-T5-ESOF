@@ -41,7 +41,7 @@ def main():
 
     if not os.path.exists(FILE_PATH):
         print(f"ERRO: Arquivo não encontrado em: {os.path.abspath(FILE_PATH)}")
-        print("    Monte o dataset com: -v ./dataset:/data")
+        print("Monte o dataset com: -v ./dataset:/data")
         connection.close()
         sys.exit(1)
 
@@ -78,7 +78,7 @@ def main():
                     mensagens_enviadas += 1
 
                     if mensagens_enviadas % 5000 == 0:
-                        print(f"{mensagens_enviadas} mensagens processadas e enviadas...")
+                       print(f"{mensagens_enviadas} mensagens processadas e enviadas...")
 
                 except json.JSONDecodeError:
                     linhas_com_erro += 1

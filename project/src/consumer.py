@@ -50,10 +50,14 @@ def main():
 
             texto = dado_recebido.get('texto', '')
             texto_curto = texto[:80] + "..." if len(texto) > 80 else texto
-            print(f"     Review:  {texto_curto}")
+            print(f"Review:  {texto_curto}")
             print("-" * 50)
 
             ch.basic_ack(delivery_tag=method.delivery_tag)
+            #Limitador de mensagens
+            if mensagens_recebidas == 500: 
+                    print(f"\n Foram recebidas {mensagens_recebidas}. Recebimento finalizado")
+                    connection.close()
 
         except json.JSONDecodeError:
             print(f" Erro ao decodificar a mensagem: {body}")
@@ -76,12 +80,10 @@ def main():
         if connection and connection.is_open:
             connection.close()
 
-        print("\n" + "="*50)
-        print(" RELATÓRIO DE EXECUÇÃO DO CONSUMIDOR")
-        print("="*50)
-        print(f" Total recebido e processado: {mensagens_recebidas} mensagens")
-        print(" Status: Conexão encerrada com segurança.")
-        print("="*50)
+        print("\n")
+        print("\nRELATÓRIO DE EXECUÇÃO DO CONSUMIDOR")
+        print(f"\nTotal recebido e processado: {mensagens_recebidas} mensagens")
+        print("\nStatus: Conexão encerrada com segurança.")
 
 if __name__ == '__main__':
 
