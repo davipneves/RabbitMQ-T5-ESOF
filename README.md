@@ -14,8 +14,8 @@ Sistema produtor/consumidor de reviews de brinquedos (Dump escolhido pelo profes
 Crie a pasta `dataset/` e coloque o arquivo `arquivo.json` dentro:
 
 ```bash
-mkdir data
-cp /caminho/para/Toys_and_Games.json data/
+mkdir dataset
+cp /caminho/para/arquivo.json data/
 ```
 
 ### 2. Subir os serviços
