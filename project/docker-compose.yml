@@ -21,6 +21,7 @@ services:
     container_name: producer
     command: python src/producer.py
     environment:
+      MAX_MESSAGES: 500
       RABBITMQ_HOST: rabbitmq
     volumes:
       - ./dataset:/data   
