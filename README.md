@@ -54,6 +54,7 @@ O container do produtor espera encontrar o dataset mapeado em um volume local. C
 ```bash
 mkdir -p dataset
 cp /caminho/do/seu/dataset.json dataset/arquivo.json
+Bash
 
 > **Nota:** O script aceita nativamente tanto arquivos JSON formatados como um array padrão `[...]` quanto arquivos no formato JSON Lines (um JSON por linha).
 
