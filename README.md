@@ -1,6 +1,6 @@
 # Amazon Toy Reviews — Pipeline de Mensageria com RabbitMQ & Docker
 
-Este projeto implementa uma arquitetura distribuída de **Produtor/Consumidor** para processamento, validação e análise de sentimento de avaliações de brinquedos (dataset *Amazon Toys*). A infraestrutura é totalmente containerizada e utiliza o **RabbitMQ** como broker de mensagens persistentes.
+Este projeto foi desenvolvido como atividade avaliativa (T5) na disciplina de Engenharia de Software II (ESOF II) sob a orientação do Professor Allyson Costa e Silva. A aplicação implementa uma arquitetura distribuída de **Produtor/Consumidor** para processamento, validação e análise de sentimento de avaliações de brinquedos e jogos (dataset *Amazon Toys_and_Games*). A infraestrutura é totalmente containerizada e utiliza o **RabbitMQ** como broker de mensagens persistentes.
 
 ---
 
