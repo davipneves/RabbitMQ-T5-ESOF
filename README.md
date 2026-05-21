@@ -29,7 +29,7 @@ No **Consumer**, o processamento é controlado:
 
 ---
 
-## Variáveis de Ambiente
+## ⚙️ Variáveis de Ambiente
 
 As configurações do sistema podem ser customizadas diretamente no arquivo `docker-compose.yml`:
 
@@ -54,14 +54,12 @@ O container do produtor espera encontrar o dataset mapeado em um volume local. C
 ```bash
 mkdir -p dataset
 cp /caminho/do/seu/dataset.json dataset/arquivo.json
+Nota: O script aceita nativamente tanto arquivos JSON formatados como um array padrão [...] quanto arquivos no formato JSON Lines (um JSON por linha).
+
+3. Inicialização Completa
+Para construir as imagens e subir todo o ecossistema (o Docker Compose gerencia a ordem de inicialização esperando o RabbitMQ passar nos testes de healthcheck primeiro):
+
 Bash
-
-> **Nota:** O script aceita nativamente tanto arquivos JSON formatados como um array padrão `[...]` quanto arquivos no formato JSON Lines (um JSON por linha).
-
-### 3. Inicialização Completa
-Para construir as imagens e subir todo o ecossistema (o Docker Compose gerencia a ordem de inicialização esperando o RabbitMQ passar nos testes de *healthcheck* primeiro):
-
-```bash
 docker compose up --build
 4. Gerenciamento e Logs
 Para acompanhar o fluxo de dados em tempo real na tela de forma isolada, você pode filtrar os logs por serviço:
@@ -72,10 +70,7 @@ docker compose logs -f consumer
 
 # Monitorar apenas o envio de dados do Produtor
 docker compose logs -f producer
-
----
-
-Monitoramento Web (Interface do RabbitMQ)
+📊 Monitoramento Web (Interface do RabbitMQ)
 O painel de gerenciamento oficial do RabbitMQ fica disponível durante a execução do projeto. Através dele, você pode acompanhar graficamente a taxa de publicação, mensagens prontas na fila, consumidores ativos e conexões.
 
 URL: http://localhost:15672
@@ -86,5 +81,5 @@ Senha: guest
 Finalizando a Execução
 Para parar os containers e remover de maneira limpa as redes virtuais e dependências criadas pelo ecossistema, execute:
 
-```bash
+Bash
 docker compose down
