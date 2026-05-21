@@ -99,7 +99,7 @@ O painel de gerenciamento oficial do RabbitMQ fica disponível durante a execuç
 **Usuário:** guest\
 **Senha:** guest
 
-Finalizando a Execução
+## Finalizando a Execução
 Para parar os containers e remover de maneira limpa as redes virtuais e dependências criadas pelo ecossistema, execute:
 
 ```bash
