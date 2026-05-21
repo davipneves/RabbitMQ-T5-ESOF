@@ -1,10 +1,10 @@
-# 🧸 Amazon Toy Reviews — Pipeline de Mensageria com RabbitMQ & Docker
+# Amazon Toy Reviews — Pipeline de Mensageria com RabbitMQ & Docker
 
 Este projeto implementa uma arquitetura distribuída de **Produtor/Consumidor** para processamento, validação e análise de sentimento de avaliações de brinquedos (dataset *Amazon Toys*). A infraestrutura é totalmente containerizada e utiliza o **RabbitMQ** como broker de mensagens persistentes.
 
 ---
 
-## 🏗️ Arquitetura do Sistema
+## Arquitetura do Sistema
 
 O ecossistema é composto por três serviços principais coordenados via Docker Compose:
 
@@ -14,7 +14,7 @@ O ecossistema é composto por três serviços principais coordenados via Docker 
 
 ---
 
-## 🛠️ Regras de Negócio e Transformações
+## Regras de Negócio e Transformações
 
 Ao passar pelo **Producer**, cada review bruta sofre validações e enriquecimentos:
 * **Validação Estrita:** São descartadas reviews com campos obrigatórios ausentes (`reviewerID`, `asin`, `summary`, `reviewText`, `overall`) ou com notas (`overall`) fora do intervalo de 1.0 a 5.0.
@@ -29,7 +29,7 @@ No **Consumer**, o processamento é controlado:
 
 ---
 
-## ⚙️ Variáveis de Ambiente
+## Variáveis de Ambiente
 
 As configurações do sistema podem ser customizadas diretamente no arquivo `docker-compose.yml`:
 
@@ -42,7 +42,7 @@ As configurações do sistema podem ser customizadas diretamente no arquivo `doc
 
 ---
 
-## 🚀 Como Executar
+## Como Executar
 
 ### 1. Pré-requisitos
 * [Docker](https://docs.docker.com/get-docker/) instalado.
